@@ -561,7 +561,7 @@ var XBBCODE = (function() {
 
         this._bbRegExp = new RegExp("<bbcl=([0-9]+) (" + this._tagList.join("|") + ")([ =][^>]*?)?>((?:.|[\\r\\n])*?)<bbcl=\\1 /\\2>", "gi");
         this._pbbRegExp = new RegExp("\\[(" + this._tagList.join("|") + ")([ =][^\\]]*?)?\\]([^\\[]*?)\\[/\\1\\]", "gi");
-        this._pbbRegExp2 = new RegExp("\\[(" + this._tagsNoParseList.join("|") + ")([ =][^\\]]*?)?\\]([\\s\\S]*?)\\[/\\1\\]", "gi");
+        this._pbbRegExp2 = new RegExp("\\[(" + this._tagsNoParseList.join("|") + ")([ =][^\\]]*?)?\\]([\\s\\S]*?)\\[/\\1\\]?!.*\\[/\\1\\]", "gi");
 
         // create the regex for escaping ['s that aren't apart of tags
         (function() {
